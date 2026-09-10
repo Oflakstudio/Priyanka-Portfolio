@@ -1,32 +1,23 @@
-# Priyanka Vishwakarma — Fashion × Textile × Design
+# Priyanka Vishwakarma — Portfolio
 
-Static HTML/CSS/JavaScript rebuild of the supplied Priyanka portfolio reference.
+A fresh, from-scratch static portfolio rebuild.
 
-## Structure
+The published site is intentionally independent of the previous implementation. It uses a new visual system, new page composition, and new interaction structure while using Priyanka's portfolio artwork and documents as content assets.
 
-- `index.html` — full responsive portfolio page
-- `styles.css` — editorial layout, typography, responsive rules, modal gallery styling
-- `script.js` — interactive case-study galleries and modal behavior
-- `.github/workflows/deploy.yml` — GitHub Pages deployment
-- `src/` — retained reference/project source files from the supplied package
+## Published files
+- `index.html`
+- `styles.css`
+- `script.js`
+- `.github/workflows/deploy.yml`
 
-## Portfolio content
-
-The page includes:
-
-- Priyanka identity/logo
-- Azure Heirloom Collection
-- Womenswear Design Series — 7 concepts
-- Textile & Surface Development
-- Additional creative work
-- About, skills, education and tools
+## Content
+- Fashion / textile / surface design positioning
+- Azure Heirloom
+- Womenswear design studies
+- Textile & surface development
+- Creative archive
+- About and education
 - Resume and certificate links
-- Identity study
-- Contact details
-- Responsive case-study galleries
-
-The artwork, supplied fonts, logo and documents are loaded from Priyanka's established source portfolio repository so the new site uses the same verified portfolio assets and image-to-project mapping.
-
-## Live site
-
-https://oflakstudio.github.io/Priyanka-Portfolio/
+- Interactive case-study viewer
+- Responsive navigation
+- GitHub Pages deployment
