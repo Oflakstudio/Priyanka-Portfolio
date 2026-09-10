@@ -1,18 +1,15 @@
 const ASSET='https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets';
-const image=file=>`${ASSET}/images/${file}`;
+const image=(file)=>`${ASSET}/images/${file}`;
 const projects={
- azure:{index:'01',kicker:'Collection / Azure Heirloom',title:'Azure Heirloom',description:'A womenswear collection inspired by spirituality, architecture, traditional weaving, and the visual heritage of Banaras.',details:['Palette: blue, ivory and gold.','Woven references, embroidery, decorative borders and embellished details.','Full-look documentation with front, side, back and close-up views.'],images:['the-azure-hairloom-01.jpg','the-azure-hairloom-02.jpg','the-azure-hairloom-03.jpg','the-azure-hairloom-04.jpg','the-azure-hairloom-05.jpg','the-azure-hairloom-06.jpg','the-azure-hairloom-07.jpg']},
- womenswear:{index:'02',kicker:'Design series / Womenswear',title:'Womenswear Design Series',description:'Seven womenswear concepts across contemporary, occasion, evening and fusion-inspired silhouettes.',details:['Draping, layered forms, cut-outs, gathered details and statement sleeves.','Fitted and flowing silhouettes explored through iterative development.','Supporting research covers fabric, colour, construction and inspiration.'],images:['aurelia.jpg','rayaa.jpg','modern-duality.jpg','refiend-contrast.jpg','the-amaranthine-form.jpg','rangrezz-01.jpg','the-royal-blue-garden.jpg','rangrezz-02.jpg','rangrezz-03.jpg','rangrezz-04.jpg','rangrezz-05.jpg']},
- textile:{index:'03',kicker:'Textile / Surface development',title:'Textile & Surface Development',description:'A textile study connecting handcrafted surface techniques with outfit direction.',details:['Diagonal stripe, horizontal shibori, curved-line and diamond shibori experiments.','Pattern, texture and visual effect documented through swatches and boards.','Surface decisions translated into proposed garment applications.'],images:['textile-surface.jpg','fabric.jpg','manipulations.jpg','colour-story.jpg']},
- creative:{index:'04',kicker:'Creative archive',title:'Surface, Styling & Visual Research',description:'Additional creative work spanning craft, patchwork, styling research and image-led development.',details:['Fabric painting and mixed-media surface work.','Patchwork and collage experiments.','Accessories research and colour-led visual studies.'],images:['additional-work.jpg','colarge.jpg','accessories-style-comparison.jpg','colour-story.jpg']}
+  azure:{index:'01',kicker:'Azure Heirloom / Collection',title:'Azure Heirloom',description:'Womenswear research and design centered on blue, ivory and gold, with references to Banaras heritage, weaving, embroidery and decorative detail.',details:['Collection direction: womenswear','Material language: weaving, embroidery, embellishment','Documentation: collection boards, garment views and detail studies'],images:['the-azure-hairloom-01.jpg','the-azure-hairloom-02.jpg','the-azure-hairloom-03.jpg','the-azure-hairloom-04.jpg','the-azure-hairloom-05.jpg','the-azure-hairloom-06.jpg','the-azure-hairloom-07.jpg']},
+  womenswear:{index:'02',kicker:'Womenswear / Design Studies',title:'Womenswear Design Studies',description:'Seven concept directions exploring contemporary, occasion, evening and fusion-inspired silhouettes.',details:['Draping and layered silhouettes','Cut-outs, gathered details and statement sleeves','Fitted and flowing forms across front/side/back development'],images:['aurelia.jpg','rayaa.jpg','modern-duality.jpg','refiend-contrast.jpg','the-amaranthine-form.jpg','rangrezz-01.jpg','the-royal-blue-garden.jpg','rangrezz-02.jpg','rangrezz-03.jpg','rangrezz-04.jpg','rangrezz-05.jpg']},
+  textile:{index:'03',kicker:'Textile / Surface',title:'Textile & Surface Development',description:'A material-led study of tie-and-dye and shibori directions developed as surface language for fashion.',details:['Diagonal stripe','Horizontal shibori','Curved-line pattern and diamond shibori','Fabric and manipulation studies'],images:['textile-surface.jpg','fabric.jpg','manipulations.jpg','colour-story.jpg']},
+  creative:{index:'04',kicker:'Archive / Supporting Work',title:'Creative Archive',description:'Supporting studies across colour, craft, collage, styling research and visual development.',details:['Fabric and mixed-media experiments','Patchwork and collage','Accessories and styling research','Colour-led visual studies'],images:['additional-work.jpg','colarge.jpg','accessories-style-comparison.jpg','colour-story.jpg']}
 };
-const topbar=document.getElementById('topbar');
-window.addEventListener('scroll',()=>topbar.classList.toggle('scrolled',window.scrollY>40),{passive:true});
-const panel=document.getElementById('mobilePanel');
-const menuToggle=document.getElementById('menuToggle');
-function closeMenu(){menuToggle.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');panel.classList.remove('open');panel.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-menuToggle.addEventListener('click',()=>{const open=!panel.classList.contains('open');menuToggle.classList.toggle('open',open);menuToggle.setAttribute('aria-expanded',String(open));panel.classList.toggle('open',open);panel.setAttribute('aria-hidden',String(!open));document.body.style.overflow=open?'hidden':''});
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>closeMenu()));
+
+const header=document.getElementById('siteHeader');
+const mobile=document.getElementById('mobileNav');
+const mobileToggle=document.getElementById('navMobile');
 const modal=document.getElementById('modal');
 const modalClose=document.getElementById('modalClose');
 const modalKicker=document.getElementById('modalKicker');
@@ -20,10 +17,31 @@ const modalIndex=document.getElementById('modalIndex');
 const modalTitle=document.getElementById('modalTitle');
 const modalDescription=document.getElementById('modalDescription');
 const modalDetails=document.getElementById('modalDetails');
-const modalGallery=document.getElementById('modalGallery');
-function openProject(key){const p=projects[key];if(!p)return;modalKicker.textContent=p.kicker;modalIndex.textContent=p.index;modalTitle.textContent=p.title;modalDescription.textContent=p.description;modalDetails.innerHTML=p.details.map(t=>`<p>${t}</p>`).join('');modalGallery.innerHTML=p.images.map((file,i)=>`<img src="${image(file)}" alt="${p.title} — board ${i+1}" class="${i===0?'full':''}" loading="lazy">`).join('');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
-function closeProject(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();openProject(el.dataset.project)}));
-modalClose.addEventListener('click',closeProject);document.querySelector('[data-close]').addEventListener('click',closeProject);document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeProject();closeMenu()}});
-const form=document.getElementById('contactForm');
-form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('formSuccess').classList.add('show');form.reset()});
+const gallery=document.getElementById('modalGallery');
+
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>32),{passive:true});
+function setMenu(open){mobile.classList.toggle('open',open);mobileToggle.classList.toggle('open',open);mobileToggle.setAttribute('aria-expanded',String(open));mobile.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('lock',open)}
+mobileToggle.addEventListener('click',()=>setMenu(!mobile.classList.contains('open')));
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+
+function openProject(key){
+  const p=projects[key]; if(!p)return;
+  modalKicker.textContent=p.kicker;
+  modalIndex.textContent=p.index;
+  modalTitle.textContent=p.title;
+  modalDescription.textContent=p.description;
+  modalDetails.innerHTML=p.details.map(item=>`<p>${item}</p>`).join('');
+  gallery.innerHTML=p.images.map((file,i)=>`<img src="${image(file)}" alt="${p.title} — image ${i+1}" ${i>1?'loading="lazy"':''}>`).join('');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.classList.add('lock');
+  modalClose.focus();
+}
+function closeProject(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
+
+document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();openProject(el.dataset.project)}));
+modalClose.addEventListener('click',closeProject);
+document.querySelector('[data-close]').addEventListener('click',closeProject);
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeProject();setMenu(false)}});
+
+document.getElementById('contactForm').addEventListener('submit',event=>{event.preventDefault();document.getElementById('formSuccess').classList.add('show');event.currentTarget.reset()});
