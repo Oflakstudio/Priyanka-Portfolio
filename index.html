@@ -3,107 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0d1b2a">
+  <meta name="theme-color" content="#eee9e0">
   <meta name="description" content="Priyanka Vishwakarma — fashion, textile and surface design portfolio.">
-  <title>Priyanka Vishwakarma — Studio Portfolio</title>
+  <title>Priyanka Vishwakarma — Atelier Portfolio</title>
   <link rel="icon" href="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/icon-priyanka.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="#home">
-      <img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/logo-priyanka.jpg" alt="Priyanka Vishwakarma">
-      <span><b>PRIYANKA VISHWAKARMA</b><small>Fashion / Textile / Surface</small></span>
-    </a>
-    <nav class="nav-desktop" aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-mobile" id="navMobile" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-  </header>
+  <div class="site" id="home">
+    <header class="topbar" id="topbar">
+      <a class="identity" href="#home" aria-label="Priyanka Vishwakarma home">
+        <img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/logo-priyanka.jpg" alt="Priyanka Vishwakarma logo" class="identity-logo">
+        <span class="identity-text"><strong>Priyanka Vishwakarma</strong><small>Fashion / Textile / Surface</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </header>
 
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <div class="mobile-nav-top">PV / STUDIO PORTFOLIO</div>
-    <nav><a href="#work">01 <span>Work</span></a><a href="#about">02 <span>About</span></a><a href="#process">03 <span>Process</span></a><a href="#contact">04 <span>Contact</span></a></nav>
-    <div class="mobile-nav-bottom">Chhattisgarh, India</div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-top"><span>PV</span><span>Portfolio / 2026</span></div>
+      <nav><a href="#work"><i>01</i> Selected work</a><a href="#about"><i>02</i> About</a><a href="#process"><i>03</i> Process</a><a href="#contact"><i>04</i> Contact</a></nav>
+      <div class="mobile-menu-bottom">Womenswear · Textile · Surface</div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-kicker">Fashion designer / Chhattisgarh, India</div>
+          <h1>Priyanka<br><em>Vishwakarma</em></h1>
+          <p class="hero-statement">A developing design practice where <b>heritage, material and silhouette</b> meet contemporary womenswear.</p>
+          <div class="hero-actions"><a class="accent-link" href="#work">Enter portfolio <span>↘</span></a><span class="hero-year">2025—26</span></div>
+          <div class="hero-vertical">Womenswear · Textile · Surface Design</div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-image hero-image-main"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-07.jpg" alt="Azure Heirloom collection board"></div>
+          <div class="hero-image hero-image-small"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/modern-duality.jpg" alt="Modern Duality womenswear concept"></div>
+          <div class="hero-note"><span>01</span><p>Azure Heirloom<br><small>Collection study</small></p></div>
+        </div>
+      </section>
+
+      <section class="manifesto">
+        <div class="eyebrow">A studio approach</div>
+        <div class="manifesto-grid"><h2>Design begins with <em>observation.</em></h2><p>From a textile surface to a garment silhouette, every project is developed through research, material testing, colour, proportion, and close visual documentation.</p></div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="section-marker"><span>01</span><span>Selected work / four studies</span></div>
+        <div class="work-intro"><div><div class="eyebrow">Portfolio archive</div><h2>Work that moves<br>between <em>cloth &amp; form.</em></h2></div><p>Collection work, womenswear concepts, textile experiments and supporting creative studies — presented as an evolving body of practice.</p></div>
+
+        <article class="work-feature project-trigger" data-project="azure" tabindex="0" role="button" aria-label="Open Azure Heirloom case study">
+          <div class="work-feature-image"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-07.jpg" alt="Azure Heirloom collection"></div>
+          <div class="work-feature-copy"><span class="work-no">01 / COLLECTION</span><h3>Azure<br><em>Heirloom</em></h3><p>Womenswear rooted in Banaras heritage, spirituality, architecture and traditional weaving, translated through a blue–ivory–gold palette.</p><div class="work-footer"><span>2026</span><span>Open case study ↗</span></div></div>
+        </article>
+
+        <div class="work-duo">
+          <article class="work-card project-trigger" data-project="womenswear" tabindex="0" role="button" aria-label="Open Womenswear Design Studies case study">
+            <div class="work-card-image"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/modern-duality.jpg" alt="Modern Duality womenswear concept"><span>02</span></div>
+            <div class="work-card-copy"><span>WOMENSWEAR / 7 CONCEPTS</span><h3>Design <em>Studies</em></h3><p>Contemporary, occasion, evening and fusion silhouettes exploring draping, layering, cut-outs, gathered details and statement sleeves.</p><b>Explore ↗</b></div>
+          </article>
+          <article class="work-card work-card-offset project-trigger" data-project="textile" tabindex="0" role="button" aria-label="Open Textile and Surface Development case study">
+            <div class="work-card-image"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/textile-surface.jpg" alt="Textile and surface development"><span>03</span></div>
+            <div class="work-card-copy"><span>TEXTILE / SURFACE</span><h3>Surface <em>Language</em></h3><p>Tie-and-dye, shibori, material weight and pattern experiments developed with garment application in mind.</p><b>Explore ↗</b></div>
+          </article>
+        </div>
+
+        <article class="archive-card project-trigger" data-project="creative" tabindex="0" role="button" aria-label="Open Creative Archive">
+          <div class="archive-card-copy"><span>04 / SUPPORTING WORK</span><h3>Craft, colour,<br><em>and visual research.</em></h3><p>Fabric painting, patchwork, embroidery, accessory research and additional design studies.</p><b>Open archive ↗</b></div>
+          <div class="archive-mosaic"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/additional-work.jpg" alt="Fabric painting"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/accessories-style-comparison.jpg" alt="Accessories research"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/colarge.jpg" alt="Patchwork and collage"></div>
+        </article>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section-marker dark"><span>02</span><span>About / practice &amp; background</span></div>
+        <div class="about-layout">
+          <div class="about-copy"><div class="eyebrow dark-eyebrow">The designer</div><h2>Looking closely,<br><em>designing deliberately.</em></h2><p class="about-lead">Priyanka Vishwakarma is a fashion design fresher working across womenswear, textile and surface development, styling, illustration and design research.</p><p>Her approach is rooted in India's craft and textile heritage, reinterpreted through contemporary proposals with attention to colour, construction, texture and the visual story around a garment.</p><div class="about-links"><a href="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/docs/Priyanka_Vishwakarma_Resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a><a href="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/docs/Certificate.pdf" target="_blank" rel="noreferrer">Certificate ↗</a></div></div>
+          <figure class="about-image"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-01.jpg" alt="Azure Heirloom supporting board"><figcaption>Azure Heirloom / 2026</figcaption></figure>
+        </div>
+        <div class="about-facts"><div><small>Education</small><strong>Professional Fashion Designing</strong><span>Skill in a Box, Delhi · 2025—26</span></div><div><small>Education</small><strong>Handloom &amp; Textile Technology</strong><span>IIHT, Chhattisgarh · 2019—21</span></div><div><small>Core skills</small><strong>Womenswear · Styling · Textile</strong><span>Illustration · surface · colour · garment detail</span></div><div><small>Tools</small><strong>Adobe Illustrator · Canva</strong><span>Basic proficiency</span></div></div>
+      </section>
+
+      <section class="process" id="process">
+        <div class="section-marker"><span>03</span><span>Process / from reference to result</span></div>
+        <div class="process-intro"><div class="eyebrow">Studio method</div><h2>Research becomes material.<br>Material becomes <em>form.</em></h2></div>
+        <div class="process-board">
+          <figure class="process-main"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/data/azure.jpg" alt="Azure cultural research"><figcaption><b>01 / Reference field</b><span>Banaras heritage, spiritual architecture and cultural cues</span></figcaption></figure>
+          <div class="process-text"><span>OBSERVE → COLLECT → TEST → REFINE</span><p>Design development moves through cultural research, material study, colour story, mood and silhouette exploration, then into textile experimentation and garment documentation.</p></div>
+          <figure><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/fabric.jpg" alt="Fabric study"><figcaption><b>02 / Material</b><span>Weight, texture and fabric behaviour</span></figcaption></figure>
+          <figure><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/manipulations.jpg" alt="Manipulation study"><figcaption><b>03 / Experiment</b><span>Surface manipulation and embellishment</span></figcaption></figure>
+          <figure class="process-wide"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/textile-surface.jpg" alt="Textile surface development"><figcaption><b>04 / Translate</b><span>Surface technique into outfit direction</span></figcaption></figure>
+        </div>
+        <div class="process-steps"><div><i>I</i><h3>Research</h3><p>Culture, craft, architecture, archival references.</p></div><div><i>II</i><h3>Develop</h3><p>Colour, mood, proportion and silhouette.</p></div><div><i>III</i><h3>Material</h3><p>Fabric, surface, embroidery and manipulation.</p></div><div><i>IV</i><h3>Document</h3><p>Boards, details and garment presentation.</p></div></div>
+        <div class="process-archive"><div class="archive-head"><span>Creative archive</span><span>Selected supporting studies</span></div><div class="archive-grid"><button class="project-trigger" data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/additional-work.jpg" alt="Additional creative work"><span>Fabric / mixed media</span></button><button class="project-trigger" data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/colarge.jpg" alt="Patchwork collage"><span>Patchwork / collage</span></button><button class="project-trigger" data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/accessories-style-comparison.jpg" alt="Accessories styling research"><span>Accessories / styling</span></button><button class="project-trigger" data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma/main/assets/assets/images/colour-story.jpg" alt="Colour story research"><span>Colour stories</span></button></div></div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-marker dark"><span>04</span><span>Contact / let's work together</span></div>
+        <div class="contact-layout"><div><div class="eyebrow dark-eyebrow">Open to opportunity</div><h2>Let's make<br><em>something lasting.</em></h2><p>Available for entry-level fashion design, styling, textile, garment design, internships and collaborative opportunities.</p><div class="contact-details"><a href="mailto:pv6264120@gmail.com">pv6264120@gmail.com</a><a href="tel:+917987014175">+91 79870 14175</a><span>Chhattisgarh, India</span></div></div><form id="contactForm"><label>Your name<input id="name" name="name" type="text" required></label><label>Email<input id="email" name="email" type="email" required></label><label>Message<textarea id="message" name="message" rows="5" required></textarea></label><button type="submit">Send enquiry <b>↗</b></button><p id="formSuccess">Thank you. Your enquiry is ready.</p></form></div>
+        <footer><span>Priyanka Vishwakarma</span><span>Fashion / Textile / Surface</span><span>© 2026</span></footer>
+      </section>
+    </main>
   </div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="micro">PORTFOLIO / 2026</p>
-        <h1>Priyanka<br><i>Vishwakarma</i></h1>
-        <div class="hero-line"></div>
-        <p class="hero-lead">Fashion design shaped by <strong>material, cultural references and quiet detail.</strong></p>
-        <div class="hero-bottom">
-          <div><span>Practice</span><b>Womenswear · Textile · Surface</b></div>
-          <a href="#work">View work <span>↓</span></a>
-        </div>
-      </div>
-      <div class="hero-image-wrap">
-        <div class="hero-image"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-07.jpg" alt="Azure Heirloom portfolio artwork"></div>
-        <div class="hero-caption"><span>01</span><span>Azure Heirloom / Collection study</span><span>↗</span></div>
-      </div>
-    </section>
-
-    <section class="intro-strip">
-      <p>SELECTED WORK</p><p>A visual archive of womenswear concepts, textile experiments, and supporting studies.</p><p>01—04</p>
-    </section>
-
-    <section id="work" class="work section">
-      <div class="section-head"><span class="section-count">01</span><div><p>Selected work</p><h2>Four directions.<br><i>One developing voice.</i></h2></div></div>
-
-      <article class="project project-large" data-project="azure">
-        <button class="project-media"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-07.jpg" alt="Azure Heirloom collection" loading="lazy"><span class="media-note">OPEN / 01</span></button>
-        <div class="project-info"><div class="project-top"><span>01</span><span>Collection / 2026</span></div><h3>Azure <i>Heirloom</i></h3><p>Womenswear exploring spirituality, architecture, traditional weaving and the visual heritage of Banaras through blue, ivory and gold.</p><div class="chips"><span>Heritage</span><span>Weaving</span><span>Embroidery</span></div><button class="text-button" data-project="azure">View case study <b>↗</b></button></div>
-      </article>
-
-      <div class="project-pair">
-        <article class="project project-small" data-project="womenswear">
-          <button class="project-media"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/modern-duality.jpg" alt="Modern Duality womenswear concept" loading="lazy"><span class="media-note">OPEN / 02</span></button>
-          <div class="project-info"><div class="project-top"><span>02</span><span>Design series</span></div><h3>Womenswear <i>Design Studies</i></h3><p>Seven concept directions moving through contemporary, occasion, evening and fusion silhouettes.</p><button class="text-button" data-project="womenswear">Explore <b>↗</b></button></div>
-        </article>
-        <article class="project project-small project-shift" data-project="textile">
-          <button class="project-media"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/textile-surface.jpg" alt="Textile surface development" loading="lazy"><span class="media-note">OPEN / 03</span></button>
-          <div class="project-info"><div class="project-top"><span>03</span><span>Textile / Surface</span></div><h3>Surface <i>Development</i></h3><p>Tie-and-dye, shibori, pattern and material investigations developed for garment application.</p><button class="text-button" data-project="textile">Explore <b>↗</b></button></div>
-        </article>
-      </div>
-
-      <article class="archive-teaser" data-project="creative">
-        <div><span class="section-count">04</span><p>Additional archive</p></div>
-        <h3>Craft, colour, styling<br><i>&amp; visual research.</i></h3>
-        <button class="round-button" data-project="creative">Open</button>
-      </article>
-    </section>
-
-    <section id="about" class="about section">
-      <div class="about-grid">
-        <div class="about-copy"><span class="section-count light">02</span><p class="eyebrow-light">About the designer</p><h2>A practice that starts with <i>looking closely.</i></h2><p class="lead-light">Priyanka Vishwakarma is a fashion design fresher working across womenswear, textile and surface development, styling, illustration and design research.</p><p class="body-light">Her work brings cultural and material references into contemporary design proposals, with an emphasis on colour, construction, textile detail and the visual story around a garment.</p><div class="about-actions"><a href="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/docs/Priyanka_Vishwakarma_Resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a><a href="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/docs/Certificate.pdf" target="_blank" rel="noreferrer">Certificate ↗</a></div></div>
-        <div class="about-panel"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/the-azure-hairloom-01.jpg" alt="Azure Heirloom supporting board" loading="lazy"><span>ARCHIVE / AZURE HEIRLOOM</span></div>
-      </div>
-      <div class="about-data"><div><small>Education</small><b>Professional Fashion Designing</b><span>Skill in a Box, Delhi / 2025–2026</span></div><div><small>Education</small><b>Handloom &amp; Textile Technology</b><span>IIHT, Chhattisgarh / 2019–2021</span></div><div><small>Core</small><b>Womenswear · Styling · Textile</b><span>Illustration · surface · colour · detail</span></div><div><small>Tools</small><b>Adobe Illustrator · Canva</b><span>Basic proficiency</span></div></div>
-    </section>
-
-    <section id="process" class="process section">
-      <div class="section-head"><span class="section-count">03</span><div><p>Process</p><h2>Research becomes <i>material.</i><br>Material becomes form.</h2></div></div>
-      <div class="process-grid">
-        <figure class="process-main"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/data/azure.jpg" alt="Azure cultural research" loading="lazy"><figcaption><b>01 / Research</b><span>Cultural and visual reference gathering</span></figcaption></figure>
-        <div class="process-note"><span>Studio method</span><p>Observe → collect → test → refine → document. Research is used to build a visual vocabulary before the garment or surface direction is resolved.</p></div>
-        <figure><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/fabric.jpg" alt="Fabric material study" loading="lazy"><figcaption><b>02 / Material</b><span>Weight, texture and surface</span></figcaption></figure>
-        <figure><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/manipulations.jpg" alt="Surface manipulation study" loading="lazy"><figcaption><b>03 / Experiment</b><span>Manipulation and embellishment</span></figcaption></figure>
-        <figure class="process-wide"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/textile-surface.jpg" alt="Textile surface development board" loading="lazy"><figcaption><b>04 / Translate</b><span>Surface technique into outfit direction</span></figcaption></figure>
-      </div>
-      <div class="process-list"><div><b>I</b><span>Research</span><p>Culture, craft, architecture and visual references.</p></div><div><b>II</b><span>Develop</span><p>Colour, silhouette, mood and proportion.</p></div><div><b>III</b><span>Material</span><p>Fabric, surface, embroidery and manipulation.</p></div><div><b>IV</b><span>Document</span><p>Boards, details and garment presentation.</p></div></div>
-      <div class="mini-archive"><div class="mini-head"><span>Creative archive</span><span>Selected supporting work</span></div><div class="mini-grid"><button data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/additional-work.jpg" alt="Additional creative work" loading="lazy"><span>Fabric / mixed media</span></button><button data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/colarge.jpg" alt="Patchwork and collage" loading="lazy"><span>Patchwork / collage</span></button><button data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/accessories-style-comparison.jpg" alt="Accessories styling research" loading="lazy"><span>Accessories / styling</span></button><button data-project="creative"><img src="https://raw.githubusercontent.com/Oflakstudio/Priyanka-vishwakarma-portfolio/main/assets/assets/images/colour-story.jpg" alt="Colour story research" loading="lazy"><span>Colour stories</span></button></div></div>
-    </section>
-
-    <section id="contact" class="contact section">
-      <div class="contact-head"><span class="section-count light">04</span><p>Contact</p><span>Available for entry-level opportunities</span></div>
-      <div class="contact-main"><div><h2>Let's make<br><i>something memorable.</i></h2><p>Fashion design, styling, textile and garment design opportunities, internships and collaborations.</p><div class="contact-details"><a href="mailto:pv6264120@gmail.com">pv6264120@gmail.com</a><a href="tel:+917987014175">+91 79870 14175</a><span>Chhattisgarh, India</span></div></div><form id="contactForm"><label>Name<input id="name" type="text" required></label><label>Email<input id="email" type="email" required></label><label>Message<textarea id="message" rows="4" required></textarea></label><button type="submit">Send enquiry <b>↗</b></button><p id="formSuccess" class="form-success">Thank you. Your enquiry is ready.</p></form></div>
-      <footer><span>Priyanka Vishwakarma</span><span>Fashion / Textile / Surface</span><span>© 2026</span></footer>
-    </section>
-  </main>
-
-  <div class="modal" id="modal" aria-hidden="true"><div class="modal-bg" data-close></div><div class="modal-window" role="dialog" aria-modal="true"><div class="modal-header"><span id="modalKicker">Case study</span><button id="modalClose">Close ×</button></div><div class="modal-layout"><div class="modal-text"><small id="modalIndex"></small><h2 id="modalTitle"></h2><p id="modalDescription"></p><div id="modalDetails"></div></div><div class="modal-gallery" id="modalGallery"></div></div></div></div>
+  <div class="modal" id="projectModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-window" role="dialog" aria-modal="true"><div class="modal-top"><span id="modalKicker">Case study</span><button id="modalClose">Close ×</button></div><div class="modal-body"><div class="modal-copy"><span id="modalNumber"></span><h2 id="modalTitle"></h2><p id="modalDescription"></p><div id="modalDetails"></div></div><div id="modalGallery" class="modal-gallery"></div></div></div></div>
   <script src="script.js"></script>
 </body>
 </html>
