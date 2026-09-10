@@ -1,0 +1,6 @@
+const header=document.querySelector('[data-header]');const menu=document.querySelector('#mobile-menu');const toggle=document.querySelector('.menu-toggle');const closeBtn=document.querySelector('[data-menu-close]');
+const setMenu=(open)=>{menu?.classList.toggle('open',open);menu?.setAttribute('aria-hidden',String(!open));toggle?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)};
+toggle?.addEventListener('click',()=>setMenu(true));closeBtn?.addEventListener('click',()=>setMenu(false));document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+const onScroll=()=>header?.classList.toggle('scrolled',window.scrollY>24);onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+const revealTargets=document.querySelectorAll('[data-reveal]');if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.08});revealTargets.forEach(el=>{el.classList.add('reveal');io.observe(el)})}else{revealTargets.forEach(el=>el.classList.add('is-visible'))}
+document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
