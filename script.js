@@ -7,31 +7,32 @@ const projects={
   creative:{index:'04',kicker:'Archive / Supporting Work',title:'Creative Archive',description:'Supporting studies across colour, craft, collage, styling research and visual development.',details:['Fabric and mixed-media experiments','Patchwork and collage','Accessories and styling research','Colour-led visual studies'],images:['additional-work.jpg','colarge.jpg','accessories-style-comparison.jpg','colour-story.jpg']}
 };
 
-const header=document.getElementById('siteHeader');
-const mobile=document.getElementById('mobileNav');
-const mobileToggle=document.getElementById('navMobile');
-const modal=document.getElementById('modal');
+const header=document.getElementById('topbar');
+const mobile=document.getElementById('mobileMenu');
+const mobileToggle=document.getElementById('menuButton');
+const modal=document.getElementById('projectModal');
 const modalClose=document.getElementById('modalClose');
 const modalKicker=document.getElementById('modalKicker');
-const modalIndex=document.getElementById('modalIndex');
+const modalIndex=document.getElementById('modalNumber');
 const modalTitle=document.getElementById('modalTitle');
 const modalDescription=document.getElementById('modalDescription');
 const modalDetails=document.getElementById('modalDetails');
 const gallery=document.getElementById('modalGallery');
 
-window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>32),{passive:true});
-function setMenu(open){mobile.classList.toggle('open',open);mobileToggle.classList.toggle('open',open);mobileToggle.setAttribute('aria-expanded',String(open));mobile.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('lock',open)}
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30),{passive:true});
+function setMenu(open){mobile.classList.toggle('open',open);mobileToggle.setAttribute('aria-expanded',String(open));mobile.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('lock',open)}
 mobileToggle.addEventListener('click',()=>setMenu(!mobile.classList.contains('open')));
-document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+document.querySelectorAll('.mobile-menu a,.desktop-nav a,.hero-bottom a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
 
 function openProject(key){
-  const p=projects[key]; if(!p)return;
+  const p=projects[key];
+  if(!p)return;
   modalKicker.textContent=p.kicker;
   modalIndex.textContent=p.index;
   modalTitle.textContent=p.title;
   modalDescription.textContent=p.description;
   modalDetails.innerHTML=p.details.map(item=>`<p>${item}</p>`).join('');
-  gallery.innerHTML=p.images.map((file,i)=>`<img src="${image(file)}" alt="${p.title} — image ${i+1}" ${i>1?'loading="lazy"':''}>`).join('');
+  gallery.innerHTML=p.images.map((file,i)=>`<img src="${image(file)}" alt="${p.title} — board ${i+1}" ${i>1?'loading="lazy"':''}>`).join('');
   modal.classList.add('open');
   modal.setAttribute('aria-hidden','false');
   document.body.classList.add('lock');
@@ -39,7 +40,10 @@ function openProject(key){
 }
 function closeProject(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
 
-document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();openProject(el.dataset.project)}));
+document.querySelectorAll('.project-trigger').forEach(el=>{
+  el.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();openProject(el.dataset.project)});
+  el.addEventListener('keydown',event=>{if((event.key==='Enter'||event.key===' ')&&el.getAttribute('role')==='button'){event.preventDefault();openProject(el.dataset.project)}});
+});
 modalClose.addEventListener('click',closeProject);
 document.querySelector('[data-close]').addEventListener('click',closeProject);
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeProject();setMenu(false)}});
